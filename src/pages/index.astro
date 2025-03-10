@@ -1,0 +1,249 @@
+---
+import '@/styles/globals.css'
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { MetricCircle } from "@/components/MetricCircle"
+import { ContactForm } from "@/components/ContactForm"
+import { 
+  ClipboardList, 
+  Clock, 
+  CreditCard, 
+  ArrowRight, 
+  Facebook, 
+  Twitter, 
+  Instagram,
+  Star,
+  ChefHat,
+  Users,
+  ThumbsUp,
+  Timer
+} from 'lucide-react';
+---
+
+<Layout title="Orderly's SAS - Innovación Tecnológica para Gastronomía">
+  <div class="min-h-screen bg-[#121212]">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
+      <div class="container mx-auto px-8 flex h-20 items-center justify-between">
+        <div class="flex items-center gap-2">
+          <img src="https://i.imgur.com/W5rp4C6.png" alt="Orderly's Logo" class="h-8" />
+        </div>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#features" class="text-white/70 hover:text-white transition-colors">Servicios</a>
+          <a href="#mission" class="text-white/70 hover:text-white transition-colors">Nosotros</a>
+          <a href="#testimonials" class="text-white/70 hover:text-white transition-colors">Testimonios</a>
+          <Button variant="outline" class="border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-colors">
+            Iniciar Sesión
+          </Button>
+          <Button class="bg-red-500 hover:bg-red-600 transition-colors">
+            Empezar Ahora
+          </Button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+      <!-- Hero Section -->
+      <section class="relative pt-32 pb-20 overflow-hidden container m-auto">
+        <div class="absolute inset-0 z-0">
+          <img 
+            src="https://i.imgur.com/H9Ji2NZ.png" 
+            alt="Hero Background" 
+            class="w-full h-full object-cover opacity-20"
+          />
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#121212]"></div>
+        </div>
+        
+        <div class="relative z-10 flex flex-col items-center space-y-8 text-center">
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50">
+              Innovación Tecnológica
+            </span>
+            <br />
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-red-700">
+              para el Sector Gastronómico
+            </span>
+          </h1>
+          <p class="text-xl md:text-2xl text-white/60 max-w-3xl">
+            Optimice sus operaciones, mejore la experiencia del cliente y aumente sus ingresos con nuestra plataforma integral de gestión.
+          </p>
+          <div class="flex gap-4">
+            <Button size="lg" class="bg-red-500 hover:bg-red-600 transition-colors text-lg px-8">
+              Solicitar Demo
+              <ArrowRight class="ml-2 h-5 w-5" />
+            </Button>
+            <Button size="lg" variant="outline" class="border-white/20 hover:bg-white/10 transition-colors text-lg px-8">
+              Conocer Más
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Metrics -->
+      <section class="py-20 bg-black/30">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 container m-auto">
+          <MetricCircle client:load percentage={98} label="Satisfacción del Cliente" />
+          <MetricCircle client:load percentage={40} label="Mejora en Eficiencia" />
+          <MetricCircle client:load percentage={65} label="Reducción de Errores" />
+          <MetricCircle client:load percentage={85} label="Retención de Clientes" />
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="py-20 relative">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50">
+          ¿Qué Hacemos?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 container m-auto">
+          <div class="feature-card">
+            <ClipboardList class="h-12 w-12 mb-6 text-red-500" />
+            <h3 class="text-xl font-bold mb-4">Gestión de Pedidos</h3>
+            <p class="text-white/60">
+              Optimice la toma y gestión de pedidos en tiempo real, reduciendo errores y mejorando la eficiencia operativa.
+            </p>
+          </div>
+          <div class="feature-card">
+            <Clock class="h-12 w-12 mb-6 text-red-500" />
+            <h3 class="text-xl font-bold mb-4">Análisis en Tiempo Real</h3>
+            <p class="text-white/60">
+              Monitoree y analice sus operaciones en tiempo real para tomar decisiones estratégicas informadas.
+            </p>
+          </div>
+          <div class="feature-card">
+            <CreditCard class="h-12 w-12 mb-6 text-red-500" />
+            <h3 class="text-xl font-bold mb-4">Pagos Integrados</h3>
+            <p class="text-white/60">
+              Integre múltiples métodos de pago de forma segura y eficiente para una mejor experiencia del cliente.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission & Vision -->
+      <section id="mission" class="py-20 bg-black/30">
+        <div class="grid md:grid-cols-2 gap-12 container m-auto">
+          <div class="feature-card p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+            <h2 class="text-2xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50">Nuestra Misión</h2>
+            <p class="text-white/60 leading-relaxed">
+              Ofrecemos servicios de alta calidad al desarrollar una plataforma que implementa <strong>procesos más eficaces</strong> y reduce los costos operativos, impulsando la eficiencia y competitividad de nuestros clientes. Impulsamos la <strong>transformación digital</strong> en las pymes gastronómicas mediante una solución digital accesible que agiliza la gestión de pedidos, optimiza los cobros e integra diversos métodos de pago.
+            </p>
+          </div>
+          <div class="feature-card p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+            <h2 class="text-2xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50">Nuestra Visión</h2>
+            <p class="text-white/60 leading-relaxed">
+              Para 2031, seremos la <strong>plataforma líder en gestión gastronómica</strong> en el Valle del Cauca, mejorando la experiencia del cliente y potenciando las facilidades para los restaurantes pymes, consolidándonos como referentes en <strong>innovación tecnológica</strong> y abriendo a los negocios a nuevas oportunidades para conectar con más clientes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section id="testimonials" class="py-20">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50">
+          Lo Que Dicen Nuestros Clientes
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8 container m-auto">
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&q=80&w=150&h=150" alt="Chef Juan" class="w-16 h-16 rounded-full mb-4 mx-auto" />
+            <div class="flex justify-center mb-4">
+              <div class="star-rating">★★★★★</div>
+            </div>
+            <p class="text-white/60 text-center mb-4">"Orderly's ha transformado completamente la manera en que gestionamos nuestro restaurante. La eficiencia ha aumentado significativamente."</p>
+            <p class="text-white font-semibold text-center">Juan Pérez</p>
+            <p class="text-white/40 text-center text-sm">La Cocina de Juan</p>
+          </div>
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?auto=format&fit=crop&q=80&w=150&h=150" alt="Chef María" class="w-16 h-16 rounded-full mb-4 mx-auto" />
+            <div class="flex justify-center mb-4">
+              <div class="star-rating">★★★★★</div>
+            </div>
+            <p class="text-white/60 text-center mb-4">"La integración de pagos y la gestión de pedidos es excepcional. Nuestros clientes están más satisfechos que nunca."</p>
+            <p class="text-white font-semibold text-center">María González</p>
+            <p class="text-white/40 text-center text-sm">Sabores del Valle</p>
+          </div>
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=150&h=150" alt="Chef Carlos" class="w-16 h-16 rounded-full mb-4 mx-auto" />
+            <div class="flex justify-center mb-4">
+              <div class="star-rating">★★★★★</div>
+            </div>
+            <p class="text-white/60 text-center mb-4">"El análisis en tiempo real nos ha permitido tomar mejores decisiones y optimizar nuestras operaciones."</p>
+            <p class="text-white font-semibold text-center">Carlos Rodríguez</p>
+            <p class="text-white/40 text-center text-sm">Fusion Gourmet</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 bg-black/30">
+        <div class="max-w-md mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-white to-white/50">
+            Mantente Informado
+          </h2>
+          <ContactForm client:load />
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black/40 border-t border-white/10 pt-20 pb-10">
+      <div class="container m-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          <div class="space-y-4">
+            <img src="https://i.imgur.com/W5rp4C6.png" alt="Orderly's Logo" class="h-8" />
+            <p class="text-white/60">Transformando el sector gastronómico con innovación tecnológica.</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white/60 hover:text-white transition-colors">
+                <Facebook class="h-5 w-5" />
+              </a>
+              <a href="#" class="text-white/60 hover:text-white transition-colors">
+                <Twitter class="h-5 w-5" />
+              </a>
+              <a href="#" class="text-white/60 hover:text-white transition-colors">
+                <Instagram class="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white mb-4">Enlaces Rápidos</h3>
+            <ul class="space-y-2">
+              <li><a href="#features" class="text-white/60 hover:text-white transition-colors">Servicios</a></li>
+              <li><a href="#mission" class="text-white/60 hover:text-white transition-colors">Nosotros</a></li>
+              <li><a href="#testimonials" class="text-white/60 hover:text-white transition-colors">Testimonios</a></li>
+              <li><a href="#" class="text-white/60 hover:text-white transition-colors">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white mb-4">Contacto</h3>
+            <ul class="space-y-2 text-white/60">
+              <li>info@orderlys.com</li>
+              <li>+57 (2) 555-0123</li>
+              <li>Cali, Valle del Cauca</li>
+              <li>Colombia</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white mb-4">Newsletter</h3>
+            <p class="text-white/60 mb-4">Suscríbete para recibir noticias y actualizaciones.</p>
+            <div class="flex gap-2">
+              <Input type="email" placeholder="Tu email" class="bg-white/5 border-white/10" />
+              <Button class="bg-red-500 hover:bg-red-600">Suscribir</Button>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-white/40 text-sm text-center md:text-left">
+              © 2025 Orderly's SAS. Todos los derechos reservados.
+            </p>
+            <div class="flex gap-4">
+              <a href="#" class="text-white/40 hover:text-white text-sm transition-colors">Política de Privacidad</a>
+              <a href="#" class="text-white/40 hover:text-white text-sm transition-colors">Términos de Servicio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</Layout>

@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 100% 50%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-[#121212] text-foreground;
+  }
+}
+
+.feature-card {
+  @apply p-8 rounded-xl bg-white/5 transition-all duration-300;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.metric-circle {
+  @apply relative w-32 h-32 rounded-full;
+  background: conic-gradient(theme(colors.red.500) var(--percentage), theme(colors.gray.800) var(--percentage));
+}
+
+.metric-circle::before {
+  content: '';
+  @apply absolute top-2 left-2 right-2 bottom-2 bg-[#121212] rounded-full;
+}
+
+.metric-number {
+  @apply absolute inset-0 flex items-center justify-center text-2xl font-bold;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.star-rating {
+  color: #FFD700;
+}
