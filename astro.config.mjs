@@ -7,7 +7,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: "https://nicoarbelaez.github.io",
-  base: "landing-orderlys",
+  base: "landing-orderlys-temp",
   integrations: [
     react(),
     tailwind({
